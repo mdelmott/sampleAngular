@@ -13,5 +13,9 @@
     "gulp-rename": "^1.2.2",
     "oclazyload": "^1.0.9",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "engines" : {
+    "node" : "4.5.0",
+    "npm" : "2.15.9"
   }
 }
