@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream');
 
 
-    gulp.task('connect', function () {
+gulp.task('connect', function () {
     connect.server({
         port: 8000,
         name: 'TestApp',
@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 });
 
 gulp.task('initialize',function () {
-    gulp.src('./src/assets/*')
+    gulp.src('./src/assets/**')
         .pipe(gulp.dest('./dist/assets/'));
     gulp.src('./src/app/index.html')
         .pipe(gulp.dest('./dist/'));
