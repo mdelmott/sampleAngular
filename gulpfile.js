@@ -21,6 +21,8 @@ gulp.task('initialize',function () {
     gulp.src('./src/app/**/Views/*')
         .pipe(rename({dirname: ''}))
         .pipe(gulp.dest('./dist/views/'));
+    gulp.src('./node_modules/bootstrap/dist/css/*.min.css')
+        .pipe(gulp.dest('./dist/assets/css/'))
 });
 
 gulp.task('browserify', function () {

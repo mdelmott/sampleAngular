@@ -1,6 +1,7 @@
 //module1 node modules
 require('angular-route');
 require('oclazyload');
+require('angular-ui-bootstrap');
 
 //Controller
 var module1Ctrl = require('./Controllers/Module1Controller');
@@ -8,11 +9,11 @@ var module1Ctrl = require('./Controllers/Module1Controller');
 //Services
 var service2Serv = require('./Services/service2');
 
-//Driectives
+//Directives
 
 
 //Config
-angular.module('module1', ['ngRoute', 'oc.lazyLoad'])
+angular.module('module1', ['ngRoute', 'oc.lazyLoad', 'ui.bootstrap'])
     .config(function($routeProvider) {
         $routeProvider
             .when("/", {
@@ -21,7 +22,10 @@ angular.module('module1', ['ngRoute', 'oc.lazyLoad'])
                 resolve : {
                     lazy: ['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load([{
-                            files: ['./assets/css/sample.css']
+                            files: [
+                                './assets/css/bootstrap.min.css',
+                                './assets/css/bootstrap-theme.min.css',
+                                './assets/css/sample.css']
                         }]);
                     }]
                 }
