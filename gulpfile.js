@@ -33,3 +33,4 @@ gulp.task('browserify', function () {
 });
 
 gulp.task('build', ['browserify', 'initialize', 'connect']);
+gulp.task('default', ['browserify', 'initialize']);
