@@ -32,5 +32,13 @@ gulp.task('browserify', function () {
        .pipe(gulp.dest('./dist/'));
 });
 
+gulp.task('deploy', function () {
+   connect.server({
+       port: process.env.VCAP_APP_PORT || 8000,
+       name: 'sampleAngular',
+       root: 'dist'
+   });
+});
+
 gulp.task('build', ['browserify', 'initialize', 'connect']);
 gulp.task('default', ['browserify', 'initialize']);
