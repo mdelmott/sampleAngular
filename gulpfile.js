@@ -1,9 +1,9 @@
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
     rename = require('gulp-rename'),
+    Server = require('karma').Server,
     browserify = require('browserify'),
     source = require('vinyl-source-stream');
-
 
 gulp.task('connect', function () {
     connect.server({
@@ -38,6 +38,13 @@ gulp.task('deploy', function () {
        name: 'sampleAngular',
        root: 'dist'
    });
+});
+
+gulp.task('test', function (done) {
+    new Server({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, done).start();
 });
 
 gulp.task('build', ['browserify', 'initialize', 'connect']);

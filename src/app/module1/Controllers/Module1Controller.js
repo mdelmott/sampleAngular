@@ -66,4 +66,8 @@ module.exports = function($scope,
 
         return '';
     }
+
+    $scope.helloWorld = function(){
+        return "Hello World!!";
+    }
 };
