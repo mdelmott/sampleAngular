@@ -22,7 +22,9 @@ gulp.task('initialize',function () {
         .pipe(rename({dirname: ''}))
         .pipe(gulp.dest('./dist/views/'));
     gulp.src('./node_modules/bootstrap/dist/css/*.min.css')
-        .pipe(gulp.dest('./dist/assets/css/'))
+        .pipe(gulp.dest('./dist/assets/css/'));
+    gulp.src('./node_modules/bootstrap/dist/fonts/*')
+        .pipe(gulp.dest('./dist/assets/fonts/'));
 });
 
 gulp.task('browserify', function () {

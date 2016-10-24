@@ -25,7 +25,8 @@ angular.module('module1', ['ngRoute', 'oc.lazyLoad', 'ui.bootstrap'])
                             files: [
                                 './assets/css/bootstrap.min.css',
                                 './assets/css/bootstrap-theme.min.css',
-                                './assets/css/sample.css']
+                                './assets/css/sample.css'
+                            ]
                         }]);
                     }]
                 }

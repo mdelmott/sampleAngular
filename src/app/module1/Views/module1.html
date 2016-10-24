@@ -1,6 +1,15 @@
 <div>
-    <h1> HELLO <span ng-bind="user"></span> !!!!! </h1>
-</div>
-<div style="display:inline-block; min-height:290px;">
-    <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+    <!--<combobox items="listItem"></combobox>
+    <combobox items="listItem2"></combobox>-->
+
+    <button class="btn btn-filter" ng-click="isCollapsedHorizontal = !isCollapsedHorizontal"><span class="glyphicon glyphicon-tasks"></span></button></br>
+    <div class="row">
+        <div class="col-md-3 horizontal-collapse" uib-collapse="isCollapsedHorizontal" horizontal>
+            <button class="btn btn-remove" ng-click="isCollapsedHorizontal = !isCollapsedHorizontal"><span class="glyphicon glyphicon-remove-sign"></span></button>
+            <div class="content">Some content</div>
+        </div>
+        <div class="table-class" ng-class="{'col-md-9':!isCollapsedHorizontal,'col-md-12':isCollapsedHorizontal}">
+            <div class="content">Your table here</div>
+        </div>
+    </div>
 </div>

@@ -1,3 +1,37 @@
 h1 {
     color : red;
 }
+
+
+.horizontal-collapse{
+    height: 200px;
+    border-radius: 0;
+    background-color: #191919;
+    background-image: none;
+    color: #fff;
+    transition: all 1s;
+}
+
+.content{
+    padding-left: 10px;
+}
+
+.btn-remove, .btn-remove:hover, .btn-remove:focus{
+    position: relative;
+    left : 340px;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+
+.btn-filter {
+    margin: 10px;
+    background-image: none;
+}
+
+.table-class {
+    background: #676767;
+    height: 200px;
+}
