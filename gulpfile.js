@@ -50,4 +50,4 @@ gulp.task('test', function (done) {
 });
 
 gulp.task('build', ['browserify', 'initialize', 'connect']);
-gulp.task('default', ['browserify', 'initialize', 'test']);
+gulp.task('default', ['browserify', 'initialize']);
