@@ -18,9 +18,9 @@ describe("App", function() {
             });
         }));
 
-        it("says hello", function() {
+        /*it("says hello", function() {
             expect(scope.helloWorld()).toEqual("Hello World!!");
-        });
+        });*/
 
         /*it("says hello2", function() {
             expect(scope.helloWorld()).toEqual("Hello world!!");
